@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    color: white;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+.btn{
+    text-align: center;
+}
+body{
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 20px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/cattle.webp);
+    background-size: cover;
+}

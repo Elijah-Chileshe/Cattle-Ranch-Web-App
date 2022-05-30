@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    color: white;
+    
+}
+.border{
+    background-color: gainsboro;
+    padding: 20px;
+    border: 3px solid black!important;
+    border-radius: 20px;
+   
+ }
+ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        margin: 0px 0;
+        margin-left: 0px;
+        white-space: initial;
+        justify-content: center;
+        margin-left: 300px;
+    }
+
+    body{
+        padding-left: 35px;
+        padding-right: 35px;
+        padding-top: 20px;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(/images/cattle.webp);
+        background-size: cover;
+    }

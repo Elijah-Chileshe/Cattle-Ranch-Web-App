@@ -3,10 +3,13 @@ const formRouter = require('./routes/submitForm');
 const mongoose = require('mongoose');
 const liveStockSchema = require('./model/livestockRegSchema');
 const bodyParser = require('body-parser');
+const path = require('path');
 const app = express();
 
 //set ejs as view engine
 app.set('view engine','ejs');
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 //setup for bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
@@ -23,6 +26,10 @@ mongoose.connect(process.env.DATABASE_URL).then(()=>{
 
 //ROUTES
 app.use('/form', formRouter);
+
+app.get('/', (req, res)=>{
+    res.render('welcomePage')
+})
 
 
 app.listen(5000, ()=>{
