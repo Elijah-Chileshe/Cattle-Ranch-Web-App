@@ -1,0 +1,32 @@
+{
+  "name": "cattle-ranch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elijah-Chileshe/Cattle-Ranch-Web-App.git"
+  },
+  "keywords": [
+    "Livestock",
+    "and",
+    "Registration"
+  ],
+  "author": "Elijah Chileshe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elijah-Chileshe/Cattle-Ranch-Web-App/issues"
+  },
+  "homepage": "https://github.com/Elijah-Chileshe/Cattle-Ranch-Web-App#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  }
+}
