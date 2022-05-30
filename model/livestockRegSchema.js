@@ -16,4 +16,5 @@ const livestockSchema = ({
 
 const liveStock = mongoose.model('liveStock', livestockSchema);
 
+//Export livestock schema
 module.exports = liveStock;

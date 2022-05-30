@@ -5,25 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container{
+            background-color: gainsboro;
+            padding: 20px;
+            border: 3px solid black!important;
+            border-radius: 20px;
+        }
+    </style>
+
+
 </head>
 <body>
+    <h1><b>Please enter details of the Animals</b></h1>
+
     <form action="/form" method="post">
-        Animal number (ID)
-        <input type="number" name="animalNumber"><br>
-        Gender
-        <input type="text" name="gender"><br>
-        Breed
-        <input type="text" name="breed"><br>
-        Weight
-        <input type="number" name="weight"><br>
-        Age
-        <input type="number" name="age"><br>
-        Date of birth
-        <input type="date" name="dateOfBirth"><br>
+        <div class="container">
+        <div class="form-group">
+          <label for="animalNumber"><b>Animal Number (ID):</b></label>
+          <input type="number" class="form-control" name="animalNumber" placeholder="Enter number of animal">  
+        </div>
 
-        <button>Submit</button>
+        <div class="form-group">
+            <label for="gender"><b>Gender:</b></label>
+            <select class="form-control" name="gender" placeholder="Select gender of animal">
+              <option>Select One</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+        </div>
 
-    </form>
+        <div class="form-group">
+          <label for="breed"><b>Breed:</b></label>
+          <input type="text" class="form-control" name="breed" placeholder="Enter breed of animal">
+        </div>
+
+        <div class="form-group">
+          <label for="weight"><b>Weight:</b></label>
+          <input type="number" class="form-control" name="weight" placeholder="Enter weight of animal">
+        </div>
+
+        <div class="form-group">
+          <label for="age"><b>Age:</b></label>
+          <input type="number" class="form-control" name="age" placeholder="Enter age of animal">
+        </div>
+
+        <div class="form-group">
+          <label for="dateOfBirth"><b>Date of Birth:</b></label>
+          <input type="date" class="form-control" name="dateOfBirth" placeholder="Enter date of birth of animal">  
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>  <button class="btn btn-secondary" onclick="location.href='/form/livestock'" type="button">View Registered Animals</button>
+      </form>
+    </div>
     
 </body>
 </html>

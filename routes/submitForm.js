@@ -21,6 +21,21 @@ router.post('/', (req, res)=>{
     })
         livestock.save();
         console.log(livestock)
+        res.redirect('/form')
+})
+
+//Route to retrieve records from database
+router.get('/livestock', (req, res)=>{
+    liveStock.find((err, list)=>{
+        if(!err){
+            // console.log(list);
+            res.render('./viewPage', {
+                animalList: list
+            })
+        } else {
+            console.log(err)
+        }
+    })
 })
 
 

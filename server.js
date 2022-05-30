@@ -7,6 +7,8 @@ const app = express();
 
 //set ejs as view engine
 app.set('view engine','ejs');
+
+//setup for bodyParser
 app.use(bodyParser.urlencoded({extended: true}));
 
 //use dotenv to access db
@@ -21,7 +23,6 @@ mongoose.connect(process.env.DATABASE_URL).then(()=>{
 
 //ROUTES
 app.use('/form', formRouter);
-
 
 
 app.listen(5000, ()=>{
