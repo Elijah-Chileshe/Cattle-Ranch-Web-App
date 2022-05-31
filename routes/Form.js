@@ -4,10 +4,11 @@ const liveStock = require('../model/livestockRegSchema')
 const mongoose = require ('mongoose');
 
 
+
 //View Form Page route
 router.get('/',(req, res)=>{
     res.render('./formPage')
-})
+});
 
 //post animal data to database
 router.post('/', (req, res)=>{
@@ -22,7 +23,8 @@ router.post('/', (req, res)=>{
         livestock.save();
         console.log(livestock)
         res.redirect('/form')
-})
+});
+
 
 //Route to retrieve records from database
 router.get('/livestock', (req, res)=>{
@@ -36,7 +38,15 @@ router.get('/livestock', (req, res)=>{
             console.log(err)
         }
     })
-})
+});
+
+router.get('/livestock/delete/:id', (req, res) => {
+    liveStock.findByIdAndDelete({_id: req.params.id}, (err, list) => {
+        if(err) res.redirect('/');
+        else res.redirect('/form/livestock');
+    });
+});
+
 
 
 module.exports = router;

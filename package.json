@@ -1,7 +1,7 @@
 {
   "name": "cattle-ranch",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a web application that is used to register livestock.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "keywords": [
     "Livestock",
-    "and",
+    "Application",
     "Registration"
   ],
   "author": "Elijah Chileshe",

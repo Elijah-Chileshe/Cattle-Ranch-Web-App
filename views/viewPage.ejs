@@ -24,6 +24,7 @@
                 <th>Weight</th>
                 <th>Age</th>
                 <th>Date of Birth</th>
+                <th></th>
             </tr>
         </thead>
         <tbody> 
@@ -47,6 +48,10 @@
                 </td>
                 <td>
                     <%= list.DateOfBirth %>
+                </td>
+
+                <td>
+                    <button class="btn btn-danger" onclick="location.href='/form/livestock/delete/<%= list._id %>'" type="button">Delete</button>
                 </td>
                 
             </tr>    

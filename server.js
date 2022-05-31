@@ -1,5 +1,5 @@
 const express = require('express');
-const formRouter = require('./routes/submitForm');
+const formRouter = require('./routes/Form');
 const mongoose = require('mongoose');
 const liveStockSchema = require('./model/livestockRegSchema');
 const bodyParser = require('body-parser');
@@ -9,6 +9,7 @@ const app = express();
 //set ejs as view engine
 app.set('view engine','ejs');
 
+//setup for public folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 //setup for bodyParser
@@ -25,14 +26,16 @@ mongoose.connect(process.env.DATABASE_URL).then(()=>{
 });
 
 //ROUTES
+//display welcome page
+app.get('/', (req, res)=>{
+    res.render('./welcomePage')
+});
 app.use('/form', formRouter);
 
-app.get('/', (req, res)=>{
-    res.render('welcomePage')
-})
 
 
+//Port for server to listen on
 app.listen(5000, ()=>{
     console.log('Server is running on port 5000')
-})
+});
 
